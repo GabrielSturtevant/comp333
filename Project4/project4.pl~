@@ -80,12 +80,3 @@ e(X):- char_type(X, lower).
 
 
 
-
-
-
-
-
-
-
-
-
