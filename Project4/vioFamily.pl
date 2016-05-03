@@ -16,6 +16,7 @@ female(tomasa).
 female(janet).
 female(yolanda).
 female(magdalena).
+female(test).
 
 
 male(sdad).
