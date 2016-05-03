@@ -62,7 +62,7 @@ relative(A,B):- descendant(X,A), descendant(B,X), A\=B.
 relative(A,B):- descendant(A,X), descendant(X,B), A\=B.
 
 
-
+e(X):- char_type(X, lower).
 
 
 
