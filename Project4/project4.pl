@@ -17,6 +17,7 @@ t(X):- append(List1,[/|List2],X), t(List1), f(List2).
 t(X):- append([],List,X), f(List).
 
 
+<<<<<<< HEAD
 %Problem3
 
 subseq([],[]).
@@ -25,6 +26,26 @@ subseq([H|T],R):- subseq(T,R).
 sum([],0).
 sum([H|T],N):- sum(T,N1), N is N1 + H.
 subseqSum(L,M,X):-subseq(L,X), sum(X,M).
+=======
+
+% problem 4
+
+final(3).
+is_end(X,[]):-final(X).
+
+fsm(0,[a|T]):-fsm(0,T).
+fsm(0,[b|T]):-fsm(0,T).
+fsm(0,[a|T]):-fsm(1,T).
+
+fsm(1,[b|T]):-fsm(2,T).
+
+fsm(2,[b|T]):-fsm(3,T).
+
+fsm(3,[a|T]):-fsm(3,T).
+fsm(3,[b|T]):-fsm(3,T).
+fsm(3,T):- is_end(3,T).
+
+>>>>>>> 6b6a2a210cac438c2e5e84016b8ed6af8aef95a0
 
 
 
