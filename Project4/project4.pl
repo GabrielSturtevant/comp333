@@ -18,6 +18,31 @@ t(X):- append([],List,X), f(List).
 
 
 
+% problem 4
+
+final(3).
+initial(0).
+edge(0,1,a).
+edge(1,2,b).
+edge(2,3,b).
+edge(3,3,a).
+edge(3,3,b).
+edge(0,0,a).
+edge(0,0,b).
+
+is_end(X,[]):-final(X).
+
+fsm(0,[a|T]):-fsm(0,T).
+fsm(0,[b|T]):-fsm(0,T).
+fsm(0,[a|T]):-fsm(1,T).
+
+fsm(1,[b|T]):-fsm(2,T).
+
+fsm(2,[b|T]):-fsm(3,T).
+
+fsm(3,[a|T]):-fsm(3,T).
+fsm(3,[b|T]):-fsm(3,T).
+fsm(3,T):- is_end(3,T).
 
 
 
