@@ -17,8 +17,14 @@ t(X):- append(List1,[/|List2],X), t(List1), f(List2).
 t(X):- append([],List,X), f(List).
 
 
+%Problem3
 
-
+subseq([],[]).
+subseq([H|T],[H|R]):- subseq(T,R).
+subseq([H|T],R):- subseq(T,R).
+sum([],0).
+sum([H|T],N):- sum(T,N1), N is N1 + H.
+subseqSum(L,M,X):-subseq(L,X), sum(X,M).
 
 
 
