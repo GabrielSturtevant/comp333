@@ -19,7 +19,7 @@ t(X):- append([],List,X), f(List).
 
 subseq([],[]).
 subseq([H|T],[H|R]):- subseq(T,R).
-subseq([H|T],R):- subseq(T,R).
+subseq([_|T],R):- subseq(T,R).
 sum([],0).
 sum([H|T],N):- sum(T,N1), N is N1 + H.
 subseqSum(L,M,X):-subseq(L,X), sum(X,M).
